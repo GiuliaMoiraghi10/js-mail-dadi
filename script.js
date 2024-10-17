@@ -18,11 +18,20 @@ let mailUser = prompt("Inserisci la tua mail") //string
 const mailList = ["giulia@gmail.com", "marco@gmail.com", "vulpix@gmail.com", "ilaria@gmail.com"] //string
     console.log (mailList)
 
-if (mailList.includes(mailUser)){
-    console.log ("Puoi accedere")
-} else {
-    console.log ("Non puoi accedere")
+let messaggio = ""
+
+for (let i = 0; i < mailUser.length; i++){
+    let invitedUser = mailList [i]
+    console.log(invitedUser)
 }
+
+
+
+// if (mailList.includes(mailUser)){
+//     console.log ("Puoi accedere")
+// } else {
+//     console.log ("Non puoi accedere")
+// }
 
 
 
@@ -39,7 +48,34 @@ if (mailList.includes(mailUser)){
 //  3. Vince punteggio più alto
 //      - SE player1 > player2
 //          - player1 Vince "Hai vinto"
-//      - ALTRIMENTI SE player2 > player1
-//          - player2 Vince "Hai vinto"
-//      - ALTRIMENTI player2 = player1
+//      - ALTRIMENTI SE player2 = player1
 //          - parità "Hai pareggiato"
+//      - ALTRIMENTI 
+//          - "Hai perso"
+
+
+const player1 = []
+
+for (let i = 0; i < 6; i++){
+    const num = Math.random()
+    // console.log (num)
+    const player1 = Math.floor(Math.random() * 6) + 1
+    console.log (player1)
+}
+
+const player2 = []
+
+for (let i = 0; i < 6; i++){
+    const num = Math.random()
+    // console.log (num)
+    const player1 = Math.floor(Math.random() * 6) + 1
+    console.log (player1)
+}
+
+if (player1 > player2){
+    console.log ("Hai vinto!")
+} else if (player2 == player1){
+    console.log ("Pareggio")
+} else {
+    console.log ("Hai perso")
+}
