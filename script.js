@@ -13,10 +13,9 @@ console.log("js-mail-dadi")
 //              - stampa messaggio "Non puoi accedere"
 
 
-let mailUser = prompt("Inserisci la tua mail")
-    console.log (mailUser)
+let mailUser = prompt("Inserisci la tua mail") //string
 
-const mailList = ["giulia@gmail.com", "marco@gmail.com", "vulpix@gmail.com", "ilaria@gmail.com"]
+const mailList = ["giulia@gmail.com", "marco@gmail.com", "vulpix@gmail.com", "ilaria@gmail.com"] //string
     console.log (mailList)
 
 if (mailList.includes(mailUser)){
@@ -24,3 +23,23 @@ if (mailList.includes(mailUser)){
 } else {
     console.log ("Non puoi accedere")
 }
+
+
+
+// 2. Gioco dei dadi
+// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+// Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+//  1. Generare numero random da 1 a 6 (Giocatore 1)
+//      - creare variabile player1 -> ciclo for -> Math.random ()*6
+//      
+//  2. Generare numero random da 1 a 6 (Giocatore 2/computer)
+//      - creare variabile player2 -> ciclo for -> Math.random ()*6
+//
+//  3. Vince punteggio più alto
+//      - SE player1 > player2
+//          - player1 Vince "Hai vinto"
+//      - ALTRIMENTI SE player2 > player1
+//          - player2 Vince "Hai vinto"
+//      - ALTRIMENTI player2 = player1
+//          - parità "Hai pareggiato"
