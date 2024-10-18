@@ -23,12 +23,14 @@ let found = false
 for (let i = 0; i < mailList.length; i++){
     const currentMail = mailList[i]
     // console.log (currentMail, mailUser)
-    console.log (currentMail === mailUser)
+    // console.log (currentMail === mailUser)
 
     if (currentMail === mailUser){
         found = true
     }
 }
+
+console.log(found)
 
 if (found){
     console.log ("Hai accesso alla pagina")
@@ -63,28 +65,42 @@ if (found){
 //          - "Hai perso"
 
 
-const player1 = []
+// const player1 = []
 
-for (let i = 0; i < 6; i++){
-    const num = Math.random()
-    // console.log (num)
-    const player1 = Math.floor(Math.random() * 6) + 1
-    console.log (player1)
+// for (let i = 0; i < 6; i++){
+//     const num = Math.random()
+//     // console.log (num)
+//     const player1 = Math.floor(Math.random() * 6) + 1
+//     console.log (player1)
+// }
+
+// const player2 = []
+
+// for (let i = 0; i < 6; i++){
+//     const num = Math.random()
+//     // console.log (num)
+//     const player1 = Math.floor(Math.random() * 6) + 1
+//     console.log (player1)
+// }
+
+// if (player1 > player2){
+//     console.log ("Hai vinto!")
+// } else if (player2 == player1){
+//     console.log ("Pareggio")
+// } else {
+//     console.log ("Hai perso")
+// }
+
+const numUser = Math.floor(Math.random() * 6) + 1
+const numPc = Math.floor(Math.random() * 6) + 1
+console.log (numUser, numPc)
+
+let message = "Pareggio"
+
+if (numPc > numUser) {
+    message = "Hai perso"
+} else if (numUser > numPc) {
+    message = "Hai vinto!"
 }
 
-const player2 = []
-
-for (let i = 0; i < 6; i++){
-    const num = Math.random()
-    // console.log (num)
-    const player1 = Math.floor(Math.random() * 6) + 1
-    console.log (player1)
-}
-
-if (player1 > player2){
-    console.log ("Hai vinto!")
-} else if (player2 == player1){
-    console.log ("Pareggio")
-} else {
-    console.log ("Hai perso")
-}
+console.log (message)
