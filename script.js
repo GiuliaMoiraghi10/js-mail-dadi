@@ -18,14 +18,23 @@ let mailUser = prompt("Inserisci la tua mail") //string
 const mailList = ["giulia@gmail.com", "marco@gmail.com", "vulpix@gmail.com", "ilaria@gmail.com"] //string
     console.log (mailList)
 
-let messaggio = ""
+let found = false
 
-for (let i = 0; i < mailUser.length; i++){
-    let invitedUser = mailList [i]
-    console.log(invitedUser)
+for (let i = 0; i < mailList.length; i++){
+    const currentMail = mailList[i]
+    // console.log (currentMail, mailUser)
+    console.log (currentMail === mailUser)
+
+    if (currentMail === mailUser){
+        found = true
+    }
 }
 
-
+if (found){
+    console.log ("Hai accesso alla pagina")
+} else {
+    console.log ("Accesso negato")
+}
 
 // if (mailList.includes(mailUser)){
 //     console.log ("Puoi accedere")
